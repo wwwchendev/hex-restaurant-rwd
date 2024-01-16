@@ -1,0 +1,973 @@
+/* ----- ▶️布局開始 ------ */
+
+*,*::before,*::after{
+   box-sizing: border-box;
+}
+.wrap{
+   margin:auto;
+   position: relative; 
+}
+
+/* ----- ▶️頁首開始 ------ */
+
+.header{
+   width: 100%;
+   
+   /*🏷️父容器.wrap加position: relative*/
+   position:absolute;
+   top:0;
+   right: 0;
+   left: 0;
+
+   display: flex;
+   justify-content: space-between;
+   align-items:center;
+   background-color: rgba(0,0,0,0.9);
+
+   /*🏷️置頂*/
+   z-index: 100;
+   padding:10px 20px;
+}
+
+.header .logo{
+   display:block;
+   background:url(../photos/logo_w.png) no-repeat;
+   text-indent: 101%;
+   white-space:nowrap;
+   overflow: hidden;
+   width: 243px;
+   height: 30px;
+   margin:15px 13px;
+}
+/* ----- ▶️選單開始 ------ */
+
+.menu {
+   display:flex;   
+}
+.menu li a{
+   display: block;
+   text-decoration: none;  
+   color: #fff;
+   padding: 10px 20px;
+   font-size: 18px;
+}
+.hambuger-menu {
+   display:none;
+   padding: 20px;
+}
+
+.menu li a:hover::before{
+   content: "⭐";
+}
+
+@media(max-width:576px){
+   .header{
+   position: fixed;
+   top: 0;
+   padding: 10px 5x;
+   }
+
+   /*💻🟰水平選單*/
+   .menu {
+   position: absolute;
+   top:100%;
+   left:0;
+   right:0;
+   
+   height:0;
+   overflow: hidden;
+   display: block;
+   }
+
+   .menu li a{
+   text-align: center;
+   border-bottom: 1px solid rgb(73, 73, 73);
+   padding: 10px;
+   font-size: 18px;
+   background-color: black;
+   color: gray;
+   opacity: 80%;
+   }
+
+   /*📱🟰漢堡選單按鈕*/
+   .hambuger-menu{
+      display: block;
+   }
+
+   .header .active{
+      height: 200px;
+   }
+}
+
+
+/* ----- 選單結束 ------ */
+
+
+/* ----- 頁首結束 ------ */
+
+/* ----- ▶️BANNER開始 ------ */
+.banner{
+   background: url(../photos/header_desktop.png) no-repeat;
+   height:500px;
+   width: 100%;
+   background-size: cover;
+   background-position: center;
+
+   /*把標題置中*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.banner .bn-content{
+   background-color: rgba(0,0,0,0.5);
+   color: white;
+   text-align: center;
+   padding: 20px;
+}
+.banner .bn-content h2{
+   font-size: 36px;   
+   margin: 20px 42px 16px 22px;
+}
+.banner .bn-content h2 br{
+   display: none;
+}
+.banner .bn-content p{
+   margin:16px;  
+   line-height: 1.5;
+}
+@media(max-width:576px){
+   .banner{
+      background-image: url(../photos/header_mobile.png) ;
+      /*background-size:cover;
+      background-position: 50% 50%;*/
+   }
+   .banner .bn-content h2{
+      font-size: 30px;
+      line-height: 1.5;   
+   }
+   .banner .bn-content h2 br{
+      display: inline;
+   }
+
+}
+
+
+
+
+
+/* ----- 頁尾開始 ------ */
+
+footer{
+   display: flex;
+   justify-content: space-around;
+   padding: 50px 10px ;
+   background-color: #EFE9E7;
+}
+footer h3{
+   font-size: 24px;
+   margin-bottom: 16px;
+   color:#3D1101 ;   
+}
+footer p,li,a{
+   font-size: 16px;
+   color:#3D1101 ;
+   line-height: 1.5;
+}
+footer .about {
+   max-width: 235px; 
+   margin-right: 20px;
+}
+footer .contact {
+   max-width: 235px;   
+   text-indent: -1em;
+}
+footer .contact ul{
+   list-style-type:disc;
+}
+footer .contact li{
+   text-indent: 0em;
+}
+footer .contact li a{
+   text-decoration:none;
+}
+footer .share {
+   max-width: 245px;
+   display: flex;
+   flex-direction: column;
+   align-items:end;
+}
+footer .share .logo{
+   display:block;
+   background: url(../photos/logo_l.png) no-repeat;
+   width: 245px;
+   height: 50px;
+   text-indent: 101%;
+   white-space:nowrap;
+   overflow: hidden;
+   margin-bottom: 22px;
+}
+footer .share ul{
+   display: flex;
+}
+footer .share i{
+   font-size: 36px ;
+   margin:0 11px;
+}
+
+@media(max-width:576px){
+   footer{
+      flex-direction: column;
+      padding: 30px;
+   }
+   footer h3{
+      margin-bottom: 16px ;
+   }
+   footer .about{
+      max-width: 100%; 
+      margin:0px 0px 30px 0px;
+   }
+   footer .contact {
+      max-width: 100%;  
+      margin:0px 0px 30px 20px;
+      text-indent: -1em;
+   }  
+   footer .share {
+      max-width: 100%; 
+      display: flex;
+      flex-direction: column;
+      align-items:end;
+   }
+
+}
+
+
+
+/* ----- 頁尾結束 ------ */
+/* ----------LAYOUT END---------- */
+
+
+
+/* ----------首頁.html 開始---------- */
+
+
+.content-index h3{
+   text-align: center;
+   font-size: 24px;
+   line-height: 1.5;
+   line-height: 32px;
+   color: #3D1101 ;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   
+}
+.content-index .feature,.recommand{
+   background-color:  #EFE9E7;
+   padding:30px 80px 80px 80px;
+}
+.content-index .feature h3{
+   position:relative;
+}
+.content-index .feature h3::before{
+content:'' ;
+position:absolute;
+right: 62%;
+bottom: 50%;
+width: 10%;
+height: 1px;
+background-color:#181818;
+}
+
+.content-index .feature h3::after{
+   content:'' ;
+   position:absolute;
+   left: 62%;
+   bottom: 50%;
+   width: 10%;
+   height: 1px;
+   background-color:#181818;
+   }
+
+.content-index .feature ul{
+   display: flex;
+   justify-content: space-around;
+   margin: auto;
+}
+
+.content-index .feature li{
+   width: 30%;
+}
+.content-index .feature img{
+   display: block;
+   margin: auto;
+}
+
+
+.content-index .feature .topic{
+   text-align: center;
+   margin-top: 10px;
+}
+
+.content-index .feature p{
+   font-size: 16px;
+}
+
+@media(max-width:576px){
+   .content-index .feature h3::before,.feature h3::after{
+      display: none;
+   }
+   .content-index .feature ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   .content-index .feature li{
+      width: 100%;
+      margin-bottom: 20px;
+   }
+
+   }
+
+
+.content-index .chef{
+   background-color:#3D1101;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:0 10%;
+}
+
+.content-index .chef .chefimg{
+   background: url(../photos/main_chef_brown.png) no-repeat;
+   height: 460px;
+   width: 460px;
+   min-width: 300px;
+   background-size: cover;
+   background-position:top center;
+}
+.content-index .chef .chefinfo{
+   max-width: 350px;
+   margin-left: 40px;
+   padding:50px 0;
+}
+
+.content-index .chef .chefinfo .topic{
+   font-size: 20px;
+}
+
+.content-index .chef .chefinfo p{
+   color:#ffffff;
+   font-size: 16px;
+   line-height: 1.5;
+}
+
+@media(max-width:576px){
+   .content-index .chef{
+      flex-direction: column;
+      padding:0;      
+   }
+
+   .content-index .chef .chefimg{
+      width: 100%;
+      height: 460px;
+   }
+
+   .content-index .chef .chefinfo{
+      max-width: 80%;
+      margin-left: 0px;
+      padding: 50px 0px ;
+   }
+   
+}
+
+
+.content-index .recommand ul{
+   display: flex;
+   justify-content: center;
+}
+
+.content-index .recommand li{
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   width: 22%;
+   margin: 0 1%;
+}
+
+.content-index .recommand img{
+   margin-right:15px;
+}
+.content-index .recommand .msg-subject{
+   font-size: 18px;
+   margin: 22px 0;
+}
+.content-index .recommand .msg-somebody{
+   margin-top: 20px;
+   text-align: right;
+}
+@media(max-width:768px){
+   .content-index .recommand ul{
+      flex-direction: column;
+   }
+   .content-index .recommand li{
+      width: 100%;
+   }   
+}
+
+
+
+.content-index .map{
+   background-color:  #FAFAFA ;
+   opacity: 70% ;
+   padding:30px 80px 80px 80px;
+}
+
+.map-content{
+   display: flex;
+   justify-content: center;
+}
+
+.map-content img,form{
+   width: 40%;
+   margin:0 1%;
+}
+
+.map-content form input[type="text"],.map-content input[type="tel"], .map-content input[type="email"], .map-content input[type="number"]{
+   width: 100%;
+   padding: 7px ;
+   margin: 10px 0 15px 0;
+   font-size: 14px;
+}
+
+.map-content .radiogroup{
+   margin:10px 0;
+}
+.map-content .radiogroup label{
+   margin-right:20px ;
+}
+
+.map-content  .btn-box{
+   justify-content: flex-end;
+   margin-top: 70px ;
+}
+
+.map-content  #cancel,#submit{
+   padding:10px 20px;
+   margin: 10px ;
+}
+
+@media(max-width:576px){
+
+   .content-index .map{
+      padding:20px;
+   }
+   .map-content{
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .map-content img{
+      width: 100%;
+   }
+   .map-content form{
+      width: 100%;
+      margin: 30px 0;
+   }
+   .map-content  .btn-box{
+      justify-content: space-evenly;
+      margin-top: 20px ;
+   }
+
+}
+
+
+
+/* ----------首頁.html 結束---------- */
+
+/* ----------線上訂餐.html 開始---------- */
+
+.content-market{
+   background-color:  #EFE9E7;
+   display: flex;
+   justify-content: center;
+   margin: auto;
+   padding: 30px 160px;
+}
+@media(max-width:576px){
+   .content-market{
+      flex-direction: column;
+      padding: 30px 10%;
+      width: 100%;
+   }
+}
+
+.content-market .sort{
+   min-width: 220px;
+   margin-right: 50px;
+}
+.content-market .sort i{
+   color:  #3D1101;
+   opacity: 100%;
+   font-size: 20px;
+   margin-bottom: 20px;
+}
+
+.content-market .sort a{
+   display: block;
+   text-decoration: none;
+   padding: 5px 7px;   
+   font-size: 17px;
+}
+.content-market .sort li{
+   border-bottom: 1px solid #3D1101;
+}
+.content-market .sort li:nth-last-child(-n+1){
+   border-bottom:none;
+}
+.content-market .sort a:hover{
+   background-color:  #3D1101;
+   color:  #EFE9E7;
+}
+
+@media(max-width:576px){
+   .content-market .sort{
+      margin-right: 0px;
+   }
+}
+
+
+.content-market .main{
+   width: 70%;
+}
+
+
+.content-market .operation{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.content-market .operation .searchbar{
+   display: flex;
+   align-items: center;
+}
+.content-market .operation .searchbar input[type="text"]{
+   width: 425px;
+   height: 40px;
+   border: #3D1101 2px solid;
+   background-color:  #ffffff;
+   text-indent: 0.5em;
+}
+.content-market .operation .searchbar i{
+   background-color:  #3D1101;
+   width: 40px;
+   height: 40px;
+   opacity: 100%;
+   text-align: center;
+   line-height: 40px;
+}
+
+
+
+.content-market .operation .gocart a{
+   color: #3D1101;
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: bold;
+   
+}
+.content-market .operation .gocart span::after{
+   content: '|';
+   margin: 0 15px;
+}
+.content-market .operation .gocart i{
+   color: #3D1101;
+   opacity: 100%;
+   font-size: 24px;
+   position: relative;
+}
+.content-market .operation .gocart i::after{
+   content: '1';
+   position: absolute;
+   bottom:18px;
+   left:18px;
+   color: #ffffff;
+   background-color: #F56C23;
+   border-radius: 100%;
+   width: 20px;
+   height: 20px;
+   text-align: center;
+   line-height: 20px;
+   font-size: 12px;
+}
+
+@media(max-width:576px){
+   .content-market .main{
+      width: 100%;
+   }
+   .content-market .operation{
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      width: 100%;
+      
+   }
+   .content-market .operation .searchbar{
+      width: 100%;
+      margin: 30px 0 ;
+   } 
+   .content-market .operation .gocart{
+      margin:0 10px 30px 0;
+   } 
+}
+
+
+.content-market .product-list{
+   display: flex;
+   flex-wrap: wrap;
+   margin: auto;
+   justify-content: space-between;
+   text-align: center;   
+}
+.content-market .product-list li{
+   width: 270px;
+   min-height: 300px;
+   box-shadow: 0px 1px 2px rgba(127,127,127,0.6);
+   margin-bottom: 20px;
+   position: relative;
+}
+
+@media(max-width:576px){
+   .content-market .product-list{
+      justify-content: center;
+      
+   }
+   .content-market .product-list li{
+      width: 80%;
+      margin-bottom: 30px;
+      height: 300px;  }
+
+
+}
+
+.content-market .product-list .productimg{
+   width:100% ;
+   height: 50%;
+   background-color: red; 
+   background-repeat: no-repeat;  
+   background-size:cover;
+}
+.content-market .product-list #product1 .productimg{
+   background-image: url(../photos/product_1.png);
+}
+.content-market .product-list #product2 .productimg{
+   background-image: url(../photos/product_2.png); 
+}
+.content-market .product-list #product3 .productimg{
+   background-image: url(../photos/product_3.png); 
+}
+.content-market .product-list #product4 .productimg{
+   background-image: url(../photos/product_4.png); 
+}
+
+
+.content-market .product-list .like{
+   display: inline-block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   padding: 10px;
+   
+}
+.content-market .product-list .like i{
+   color: white;
+   font-size: 25px;
+   }
+
+   .content-market .product-list .ribbon{
+      width: 200px;
+      padding:8px 0;
+      background-color: #00CC99 ;
+      text-align:center;
+      color:#fff;
+      transform: rotate(45deg);
+      position: absolute;
+      left:60px;
+      top:18px;
+      font-size: 18px;      
+      z-index: 3;
+   }
+
+   .content-market .product-list .ribbonposition{
+      position:absolute;
+      z-index: 5;
+      right: -10px;
+      top:-8px;
+   }
+
+
+   .content-market .product-list .ribbonbox{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+   }
+   .content-market .ribbonbox::after,.ribbonbox::before{
+      content: '';
+      position:absolute;
+      display: block;
+      border: #078F6D  solid 5px;
+      z-index: 2;
+      }
+   
+   .content-market .ribbonbox::after {
+      top:52%;
+      left:95%;
+      transform: translateY(-50%);
+   } 
+   .content-market .ribbonbox::before {
+      top:0%;
+      left:48%;
+      transform: translateX(-50%);
+   } 
+.content-market .product-list .product-name{
+   font-size: 20px;
+   line-height: 1.5;
+   margin-top: 10px ;  
+   font-weight: 1000;
+}
+.content-market .product-list .product-enname{
+   font-size: 12px;
+   line-height: 1.5;
+   position: relative;
+}
+.content-market .product-list .product-enname::after{
+   content: '';
+   position: absolute;
+   top:20px;
+   right: 25%;
+   width: 50%;
+   height: 1px;
+   background-color: #181818;
+   margin-top: 5px;
+}
+.content-market .product-list .product-price{
+   font-size: 20px;
+   margin: 18px 0 5px 0;
+   font-weight: 1000;
+}
+
+.content-market .product-list .addtocart{
+   text-decoration: none;
+   border: #F56C23 2px solid;
+   border-radius: 2px;
+   display: block;
+   width: 90%;
+   margin: auto;
+   color: #F56C23;
+   padding: 3px 0 ;
+   font-weight: 300;
+   margin-bottom: 20px;
+}
+.content-market .product-list i{
+   opacity: 100%; 
+   color: #F56C23;
+}
+.content-market .product-list .addtocart:hover{
+   background-color: #F56C23;   
+}
+.content-market .product-list .addtocart:hover i{
+  color: #FFFFFF;   
+}
+
+
+/* ----------線上訂餐.html 結束---------- */
+/* ----------登入.html 開始---------- */
+
+.content-login{
+   background-color:  #EFE9E7;
+   padding:50px;
+}
+.content-login img{
+   display: block;
+   margin: auto;
+   margin-bottom:10px;   
+}
+.content-login p{
+   line-height: 1.5;
+   color: #3D1101;
+}
+.content-login .boldtext{
+   text-align: center;   
+   font-size: 20px;
+   margin-bottom:10px;   
+   font-weight: 1000;
+   text-align: center;
+}
+
+
+/*登入區塊 loginbox*/
+.content-login .loginbox{
+   width: 30%;
+   border-top:3px solid #FF5E45 ;
+   
+   margin: auto;
+   box-shadow: 0px 1px 3px rgba(127,127,127,0.8);
+   padding: 20px;
+}
+
+.loginbox label{
+   color: #3D1101 ;
+   text-indent: 0;
+   font-size: 16px;
+}
+.content-login .required::after{
+   content: "*";
+}
+
+/*輸入框*/
+.email, .password{
+   padding: 7px 30px;
+   width: 100%;
+   margin: 5px 0 10px 0;
+}
+
+/*ICON*/
+.fa-solid {
+   position: relative;
+   color: #3D1101 ;
+   opacity: 50%;
+}
+.loginbox .fa-envelope{
+   top:30px; right: 95px;
+}
+.loginbox .fa-lock{
+   top:30px; right: 62px;
+}
+.registerbox .fa-envelope{
+   top:30px; right: 90px;
+}
+.registerbox .fa-lock {
+   top:30px; right: 55px;
+}
+.registerbox .lock2{
+   top:77px; right: 72px;
+}
+
+/*忘記密碼*/
+.content-login .loginbox a{
+   color: #FF5E45;
+   text-decoration: none;
+   font-size: 16px;
+}
+/*按鈕組*/
+.btn-box{
+   display: flex;
+   justify-content: space-between;
+}
+ .btn-box input[type="button"],input[type="reset"],input[type="submit"]{
+   padding: 10px 60px ;  
+   border-radius: 2px;
+   border:0 none;
+   color:white;
+   font-weight:bold;
+   font-size:15px;  
+   cursor:pointer;
+   display:block;
+   text-align:center;
+   margin-top: 36px;
+}
+ .btn-box .btn-gray{
+   background-color: rgba(0,0,0,0.3);}
+ .btn-box .btn-orange{background-color:#F56C23;}
+
+@media(max-width:576px){
+   .content-login .loginbox{
+      width: 100%;
+   }
+   .content-login .btn-box{
+      width: 100%;
+   }
+   .content-login .btn-box input[type="button"]{
+      width: 40%;
+      padding: 10px 0px ; 
+   }
+   }
+
+/* ----------登入.html 結束---------- */
+/* ----------註冊.html 開始---------- */
+
+/*註冊區塊 */
+.content-register .form-card{
+   width: 50%;
+   border-top:3px solid #FF5E45 ;
+   
+   margin: auto;
+   box-shadow: 0px 1px 3px rgba(127,127,127,0.8);
+   padding: 20px;
+}
+
+
+.content-register{
+   background-color:  #EFE9E7;
+   padding:50px;
+}
+.content-register img{
+   display: block;
+   margin: auto;
+   margin-bottom:10px;   
+}
+.content-register p{
+   line-height: 1.5;
+   color: #3D1101;   
+}
+.content-register .boldtext{
+   text-align: center;   
+   font-size: 20px;
+   margin-bottom:10px;   
+   font-weight: 1000;
+   text-align: center;
+}
+
+.registerbox{
+   display: flex;
+}
+.registerbox .terms{
+   width: 50%;
+   color: #3D1101;
+   font-size: 18px;
+   margin: 0px 15px 129px 15px; 
+   line-height: 1.5;
+}
+
+.registerbox form{
+   width: 50%;
+}
+
+/*忘記密碼*/
+.registerbox a{
+   color: #FF5E45;
+   text-decoration: none;
+   font-size: 16px;
+}
+
+.registerbox  .btn-box{
+   display: flex;
+   justify-content: end;
+}
+
+@media(max-width:576px){
+   .content-register .form-card{
+      width: 100%;
+   }
+
+.content-login .btn-loginbox input[type="button"]{
+      padding: 5px 0px ; 
+      width: 45%; 
+      }
+
+}
+
+
+/* ----------註冊.html 結束---------- */
