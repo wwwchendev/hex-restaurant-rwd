@@ -1,0 +1,76 @@
+<%- include('../components/Banner.ejs') %>
+
+  <script async src="../../js/pages/auth.js"></script>
+  <div class="slogan topOffset">
+    <img src="../../assets/images/logo_l.png" alt="">
+    <p class="boldtext">享受美食好味道</p>
+  </div>
+
+  <main class="container auth">
+    <!-- 登入 -->
+    <form class="row login active" id="formLogin">
+      <div class="col-11 col-md-10 col-lg-4 wrap">
+        <h3>LOGIN</h3>
+        <label for="userEmail" class="required">
+          Email Address</label>
+        <div class="input-icon-box">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="userEmail" placeholder="請輸入您的電子信箱" required>
+        </div>
+        <label for="userPwd" class="required">
+          Password</label>
+        <div class="input-icon-box">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="userPwd" placeholder="請輸入您的密碼" required>
+        </div>
+
+        <a href="#" id='forgetPwd'>忘記密碼?</a>
+
+        <div class="row btns">
+          <button class="btn btn-secondary" id='goSignup'>
+            註冊 </button>
+          <button type='submit' id='loginBtn' class="btn btn-primary">
+            登入
+          </button>
+        </div>
+
+      </div>
+    </form>
+
+    <!-- 註冊 -->
+    <form class="row signup" id="formSignup">
+      <div class='col-11 col-md-10 col-lg-8  wrap'>
+        <h3>REGISTER</h3>
+        <div class="row">
+          <div class="col-12 col-lg-6 terms">
+            <h6>就是這樣條款：</h6>
+            <p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit
+              elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed,
+              ultricies sapien...</p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <label for="email" class="required">
+              Email Address</label>
+            <div class="input-icon-box">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" name="email" id="email" class="email" placeholder="請輸入您的電子信箱" required>
+            </div>
+            <label for="password" class="required">
+              Password</label>
+            <div class="input-icon-box">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" name="password" id="password" class="password" placeholder="請輸入您的密碼" required>
+            </div>
+            <div class="input-icon-box">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" name="password" id="checkPassword" class="password" placeholder="再次確認密碼" required>
+            </div>
+            <a href="#/auth">已經有帳號了?</a>
+            <button value="註冊" class="btn btn-primary" id='goLogin'>
+              註冊 </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </main>

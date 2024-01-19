@@ -3,8 +3,10 @@ import { match } from 'path-to-regexp';
 // pages
 import Home from '../html/pages/Home.ejs';
 import Menu from '../html/pages/Menu.ejs';
-import Login from '../html/pages/Login.ejs';
+import Auth from '../html/pages/Auth.ejs';
 import NotFound from '../html/pages/NotFound.ejs';
+// script
+import auth from './pages/auth';
 
 // 定义路由规则
 const routes = [
@@ -12,9 +14,9 @@ const routes = [
   { path: '/home', title: '首頁－六角西餐廳', component: 'Home' },
   { path: '/menu', title: '線上訂購美食－六角西餐廳', component: 'Menu' },
   {
-    path: '/auth/login',
+    path: '/auth',
     title: '登入－六角西餐廳',
-    component: 'Login',
+    component: 'Auth',
   },
 ];
 
@@ -62,8 +64,9 @@ function renderComponent(component) {
     case 'Menu':
       render(mainContainer, Menu);
       break;
-    case 'Login':
-      render(mainContainer, Login);
+    case 'Auth':
+      render(mainContainer, Auth);
+      auth();
       break;
     case 'NotFound':
       render(mainContainer, NotFound);
