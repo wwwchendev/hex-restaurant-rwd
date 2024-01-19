@@ -1,69 +1,121 @@
 <%- include('../components/Banner.ejs') %>
-  <main class="container topOffset">
-    <div class="content-market">
-      <div class="sort">
-        <i class="fa-solid fa-leaf" style="color: #3D1101;"> 線上訂購美食</i>
-        <ul>
-          <li><a href="">全部 (23)</a></li>
-          <li><a href="">只愛吃薯條 (18)</a></li>
-          <li><a href="">加熱就可食 (1)</a></li>
-          <li><a href="">不敗漢堡系列 (4)</a></li>
+  <main class="topOffset menu container ">
+    <div class="row topOffset">
+      <div class="col-12 col-md-4 col-lg-3">
+        <h5><i class="fa-solid fa-leaf" style="color: #3D1101;">
+          </i>線上訂購美食</h5>
+        <ul class='categoryList'>
+          <li class='active'><a href="#/menu">全部 (23)</a></li>
+          <li><a href="#/menu">只愛吃薯條 (18)</a></li>
+          <li><a href="#/menu">加熱就可食 (1)</a></li>
+          <li><a href="#/menu">不敗漢堡系列 (4)</a></li>
         </ul>
       </div>
-
-      <div class="main">
+      <div class="col-12 col-md-8 col-lg-9">
         <div class="operation">
-          <div class="searchbar">
+          <form class="searchbar">
             <input type="text" placeholder="今天我想來點...">
-            <a href=""><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-          </div>
-          <div class="gocart">
-            <a href="">
-              <span>結帳去</span><i class="fa-solid fa-cart-shopping"></i>
-            </a>
-          </div>
+            <a href="#/menu"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+          </form>
+          <a href="#/menu" class="gocart">
+            <p>結帳去</p>
+            <i class="fa-solid fa-cart-shopping">
+              <span>8</span>
+            </i>
+          </a>
         </div>
-        <ul class="product-list">
-          <li id="product1">
-            <div class="ribbonposition">
-              <div class="ribbonbox">
-                <div class="ribbon">熱銷美食</div>
+        <ul class="productList row ">
+
+          <li class='col-12 col-md-6 col-lg-4'>
+            <div class="productItem trend">
+              <div class="imgWrapper">
+                <img src="../../assets/images/product_1.png" alt="">
+                <button>
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="contentWrapper">
+                <h6>經典漢堡套餐</h6>
+                <p>Classic Hamburger Package</p>
+                <span>$120</span>
+                <button><i class="fa-solid fa-cart-shopping"> 加入購物車</i></button>
+              </div>
+              <div class="ribbonposition">
+                <div class="ribbonbox">
+                  <div class="ribbon">熱銷美食</div>
+                </div>
               </div>
             </div>
-            <a class="like" href=""><i class="fa-regular fa-heart"></i></a>
-            <div class="productimg "></div>
-            <p class="product-name">經典漢堡套餐</p>
-            <p class="product-enname">Classic Hamburger Package</p>
-            <p class="product-price">$120 </p>
-            <a href="" class="addtocart"><i class="fa-solid fa-cart-shopping"> 加入購物車</i></a>
           </li>
-          <li id="product2">
-            <a class="like" href=""><i class="fa-regular fa-heart"></i></a>
-            <div class="productimg"></div>
-            <p class="product-name">英俊香腸</p>
-            <p class="product-enname">Handsome Sausage</p>
-            <p class="product-price">$1,024</p>
-            <a href="" class="addtocart"><i class="fa-solid fa-cart-shopping"> 加入購物車</i></a>
+          <li class='col-12 col-md-6 col-lg-4'>
+            <div class="productItem trend">
+              <div class="imgWrapper">
+                <img src="../../assets/images/product_2.png" alt="">
+                <button>
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="contentWrapper">
+                <h6>英俊香腸</h6>
+                <p>Handsome Sausage</p>
+                <span>$1,024</span>
+                <button><i class="fa-solid fa-cart-shopping"> 加入購物車</i></button>
+              </div>
+              <div class="ribbonposition">
+                <div class="ribbonbox">
+                  <div class="ribbon">熱銷美食</div>
+                </div>
+              </div>
+            </div>
           </li>
-          <li id="product3">
-            <a class="like" href=""><i class="fa-regular fa-heart"></i></a>
-            <div class="productimg"></div>
-            <p class="product-name">漢堡兄弟</p>
-            <p class="product-enname">Hamburg Brothers</p>
-            <p class="product-price">$792</p>
-            <a href="" class="addtocart"><i class="fa-solid fa-cart-shopping"> 加入購物車</i></a>
+          <li class='col-12 col-md-6 col-lg-4'>
+            <div class="productItem trend">
+              <div class="imgWrapper">
+                <img src="../../assets/images/product_3.png" alt="">
+                <button>
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="contentWrapper">
+                <h6>漢堡兄弟</h6>
+                <p>Hamburg Brothers</p>
+                <span>$792</span>
+                <button><i class="fa-solid fa-cart-shopping"> 加入購物車</i></button>
+              </div>
+              <div class="ribbonposition">
+                <div class="ribbonbox">
+                  <div class="ribbon">熱銷美食</div>
+                </div>
+              </div>
+            </div>
           </li>
-          <li id="product4">
-            <a class="like" href=""><i class="fa-regular fa-heart"></i></a>
-            <div class="productimg"></div>
-            <p class="product-name">完美願望</p>
-            <p class="product-enname">Dragon Ball Package</p>
-            <p class="product-price">$999,999</p>
-            <a href="" class="addtocart"><i class="fa-solid fa-cart-shopping"> 加入購物車</i></a>
+          <li class='col-12 col-md-6 col-lg-4'>
+            <div class="productItem trend">
+              <div class="imgWrapper">
+                <img src="../../assets/images/product_4.png" alt="">
+                <button>
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="contentWrapper">
+                <h6>完美願望</h6>
+                <p>Dragon Ball Package</p>
+                <span>$999,999</span>
+                <button><i class="fa-solid fa-cart-shopping"> 加入購物車</i></button>
+              </div>
+              <div class="ribbonposition">
+                <div class="ribbonbox">
+                  <div class="ribbon">熱銷美食</div>
+                </div>
+              </div>
+            </div>
           </li>
 
         </ul>
       </div>
     </div>
-
   </main>

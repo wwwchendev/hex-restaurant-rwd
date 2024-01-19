@@ -7,6 +7,7 @@ import Auth from '../html/pages/Auth.ejs';
 import NotFound from '../html/pages/NotFound.ejs';
 // script
 import auth from './pages/auth';
+import menu from './pages/menu';
 
 // 定义路由规则
 const routes = [
@@ -63,6 +64,7 @@ function renderComponent(component) {
       break;
     case 'Menu':
       render(mainContainer, Menu);
+      menu();
       break;
     case 'Auth':
       render(mainContainer, Auth);
